@@ -1,20 +1,19 @@
 #!/bin/bash -x
 
-ft=1;
-pt=2;
+pt=1;
+ft=2;
 emprt=200;
 
 empch=$((RANDOM%3))
 
-if [ $empch -eq $ft ]
-then
-	emphr=8
-elif [ $empch -eq $pt ]
-then
-	emphr=4
-else
-	emphr=0
-fi
+case $empch in
+$pt)
+	emphr=4;;
+$ft)
+	emphr=8;;
+*)
+	emphr=0;;
+esac
 
 salary=$(($emphr * $emprt))
 echo $salary
