@@ -1,13 +1,16 @@
 #!/bin/bash -x
 
-echo "Welcome to Employee Wage Computation Program on Master Branch"
+ft=1;
+emprt=20;
 
-ip=1
-rd=$((RANDOM%2))
+empch=$((RANDOM%3))
 
-if [ $ip -eq -$eq ]
+if [$empch -eq $ft ]
 then
-   echo "Employee is Present"
+	emphr=8
 else
-   echo "Employee is Absent"
+	emphr=0
 fi
+
+salary=$(($emphr * $emprt))
+echo $salary
