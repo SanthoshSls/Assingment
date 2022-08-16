@@ -1,20 +1,11 @@
 #!/bin/bash -x
 
-ft=1;
-pt=2;
-emprt=200;
+ip=1;
+rd=$((RANDOM%2))
 
-empch=$((RANDOM%3))
-
-if [ $empch -eq $ft ]
+if [ $ip -eq $rd ]
 then
-	emphr=8
-elif [ $empch -eq $pt ]
-then
-	emphr=4
+   echo "Employee is Present"
 else
-	emphr=0
+   echo "Employee is Absent"
 fi
-
-salary=$(($emphr * $emprt))
-echo $salary
